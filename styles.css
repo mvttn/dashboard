@@ -50,6 +50,12 @@ input {
   margin-right: 100px;
 }
 
+.my-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .small-icon {
   width: 50px;
   height: 75px;
@@ -89,7 +95,13 @@ input {
   border: none;
 }
 
-button:hover {
+.my-profile:hover,
+.search-bar:hover,
+button:hover,
+li:hover,
+.card:hover,
+.announcement:hover,
+.profile:hover {
   opacity: 0.7;
   transition: 0.3s;
   scale: 1.05;
@@ -163,12 +175,6 @@ button:hover {
   border-radius: 5px;
   padding: 25px;
   box-shadow: 8px 0px 0px #4182dc inset, 2px 6px 5px rgb(199, 199, 199);
-}
-
-.card:hover {
-  opacity: 0.7;
-  transition: 0.2s;
-  scale: 1.05;
 }
 
 .announcements-section {
