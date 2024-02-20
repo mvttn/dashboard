@@ -20,8 +20,60 @@ li {
   grid-column: 2 / 3;
   display: grid;
   border: 1px solid black;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 80px 110px;
+}
+
+.search-bar {
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 40px;
+}
+
+.account {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  margin: 40px;
+  margin-right: 100px;
+}
+
+.small-icon {
+  width: 50px;
+  height: 75px;
+  clip-path: circle();
+}
+
+.greeting {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  padding: 10px 40px 10px 40px;
+}
+
+.big-icon {
+  width: 100px;
+  height: 150px;
+  clip-path: circle();
+}
+
+.actions {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 40px;
+  margin-right: 100px;
+}
+
+.actions button {
+  border-radius: 30px;
+  padding: 15px 30px;
 }
 
 .sidebar {
@@ -29,7 +81,6 @@ li {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 1fr;
-  gap: 35px;
   border: 1px solid black;
 }
 
