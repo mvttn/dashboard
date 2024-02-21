@@ -1,11 +1,15 @@
 html,
-body {
+body,
+ul {
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+ul {
+  margin: 10px;
+}
 li {
   list-style-type: none;
 }
@@ -24,24 +28,28 @@ p {
 .header {
   grid-column: 2 / 3;
   display: grid;
-  border: 1px solid black;
   grid-template-columns: 3fr 2fr;
-  grid-template-rows: 80px 110px;
+  grid-template-rows: 80px 130px;
+  box-shadow: 2px 5px 2px 2px rgb(46, 46, 46);
 }
 
 .search-bar {
   grid-column: 1 / 2;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   margin: 40px;
 }
 
+.search-bar img {
+  margin: 10px;
+}
+
 input {
-  border-radius: 15px;
+  border-radius: 18px;
   border: none;
-  padding: 8px;
+  padding: 10px;
   background-color: #e5ecf0;
+  flex: 1;
 }
 
 .account {
@@ -61,16 +69,16 @@ input {
 }
 
 .small-icon {
-  width: 50px;
+  max-width: 50px;
   height: 75px;
   clip-path: circle();
 }
 
 .greeting {
   display: flex;
-  gap: 40px;
+  gap: 20px;
   align-items: center;
-  padding: 10px 40px 10px 40px;
+  padding: 20px 40px 40px 40px;
 }
 
 .big-icon {
@@ -101,11 +109,13 @@ input {
 
 .my-profile:hover,
 .search-bar:hover,
+.big-icon:hover,
 button:hover,
 li:hover,
-.card:hover,
-.announcement:hover,
-.profile:hover {
+.bell-icon:hover,
+.title:hover,
+.profile:hover,
+.project-actions .icon:hover {
   opacity: 0.7;
   transition: 0.3s;
   scale: 1.05;
@@ -138,6 +148,22 @@ li:hover,
 .nav li,
 .settings li {
   padding: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.icon {
+  width: 25px;
+  margin-right: 25px;
+}
+
+.bell-icon {
+  margin-right: 0;
+}
+
+.sidebar-heading img {
+  width: 50px;
+  margin-right: 15px;
 }
 
 .main {
@@ -179,6 +205,15 @@ li:hover,
   border-radius: 5px;
   padding: 25px;
   box-shadow: 8px 0px 0px #4182dc inset, 2px 6px 5px rgb(199, 199, 199);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+.project-actions {
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: right;
 }
 
 .announcements-section {
@@ -223,4 +258,11 @@ li:hover,
   grid-column: 2 / 3;
   align-content: center;
   justify-items: center;
+}
+
+.cards p:last-of-type,
+.announcement p:last-child,
+.profile div:last-child {
+  color: grey;
+  font-size: 14px;
 }
